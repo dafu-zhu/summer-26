@@ -186,6 +186,7 @@ const timeline = document.querySelector("#timeline");
 const laneKey = document.querySelector("#laneKey");
 const currentDateLabel = document.querySelector("#currentDateLabel");
 const dateSummary = document.querySelector("#dateSummary");
+const agendaMode = document.querySelector("#agendaMode");
 const agendaTitle = document.querySelector("#agendaTitle");
 const agendaList = document.querySelector("#agendaList");
 const segments = document.querySelectorAll(".segment");
@@ -219,10 +220,18 @@ function renderAgenda() {
   const label = formatShortDate(date);
   const agenda = agendaForDate(date);
 
+  agendaMode.textContent = "Selected date";
   currentDateLabel.textContent = label;
   agendaTitle.textContent = label;
   dateSummary.textContent = agenda.summary;
   agendaList.innerHTML = agenda.items.map((item) => `<li>${item}</li>`).join("");
+}
+
+function renderLaneAgenda(bar) {
+  agendaMode.textContent = "Selected lane";
+  agendaTitle.textContent = bar.title;
+  dateSummary.textContent = bar.detail;
+  agendaList.innerHTML = (bar.items || [bar.detail]).map((item) => `<li>${item}</li>`).join("");
 }
 
 function renderTimeline(filter) {
@@ -258,9 +267,13 @@ function renderTimeline(filter) {
       el.style.width = `${barWidth(bar.start, bar.end)}%`;
       el.style.setProperty("--bar-color", bar.color);
       el.innerHTML = `<strong>${bar.title}</strong><span>${bar.range}</span>`;
+      el.addEventListener("pointerdown", (event) => {
+        event.stopPropagation();
+      });
       el.addEventListener("click", () => {
         selectedIndex = clampDateIndex(daysBetween(start, new Date(`${bar.start}T00:00:00`)));
-        renderAgenda();
+        cursorVisible = false;
+        renderLaneAgenda(bar);
         renderTimeline(activeFilter);
       });
       track.appendChild(el);
