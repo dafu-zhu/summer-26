@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Summer 2026 Timeline</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Summer 2026 plan</p>
+          <h1 id="page-title">Timeline Flow</h1>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="side-panel" aria-label="Lane summary">
+          <div class="panel-head">
+            <p class="eyebrow">Lane logic</p>
+            <h2>2 heavy, 3 balanced</h2>
+          </div>
+          <div class="lane-key" id="laneKey"></div>
+          <div class="checkpoint">
+            <span class="checkpoint__date">Aug 2</span>
+            <div>
+              <strong>ICAIF gate</strong>
+              <p>Only interrupts study if June paper is submission viable.</p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="timeline-panel" aria-labelledby="timeline-title">
+          <div class="panel-head panel-head--timeline">
+            <div>
+              <p class="eyebrow">Daily lanes</p>
+              <h2 id="timeline-title">Jun 1 - Aug 12</h2>
+            </div>
+            <div class="selected-date-pill" aria-live="polite">
+              <span>Selected</span>
+              <strong id="currentDateLabel">Jun 1</strong>
+            </div>
+            <div class="segmented" aria-label="Timeline filter">
+              <button class="segment is-active" type="button" data-filter="all">All</button>
+              <button class="segment" type="button" data-filter="heavy">Heavy</button>
+              <button class="segment" type="button" data-filter="study">Study</button>
+              <button class="segment" type="button" data-filter="daily">Daily</button>
+            </div>
+          </div>
+
+          <div class="time-control" aria-label="Selected date control">
+            <p id="dateSummary" class="time-control__summary">Click any date in the timeline panel.</p>
+          </div>
+
+          <div class="timeline-scroll">
+            <div class="timeline" id="timeline" aria-label="Summer timeline swimlanes"></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="detail-panel" aria-live="polite">
+        <div class="agenda-panel">
+          <p class="eyebrow">Selected date</p>
+          <h2 id="agendaTitle">Jun 1</h2>
+          <ul id="agendaList" class="agenda-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
