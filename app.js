@@ -35,62 +35,47 @@ const lanes = [
   {
     id: "paper",
     label: "Paper Critical",
-    sub: "FINM + STAT to new paper",
+    sub: "FINM + STAT + PDE to new paper",
     bars: [
       {
-        title: "Parallel relearn",
-        range: "Jun 1-6",
+        title: "Spring-26 relearn",
+        range: "Jun 1-10",
         start: "2026-06-01",
-        end: "2026-06-06",
+        end: "2026-06-10",
         color: colors.blue,
         type: "heavy",
         weight: "heavy",
         detail:
-          "One FINM32000 homework and one STAT31511 homework per day. Finish FINM HW2-HW7 and STAT HW5-HW9.",
+          "Relearn all three spring courses before choosing the paper topic: FINM32000, STAT31511, and STAT31450 PDE.",
         items: [
-          "Jun 1: FINM L2 + HW2; STAT Ch6 + HW5",
-          "Jun 2: FINM L3 + HW3; STAT Ch7 + HW6",
-          "Jun 3: FINM L4 + HW4; STAT Ch8 + HW7",
-          "Jun 4: FINM L5 + HW5; STAT Ch9 + HW8",
-          "Jun 5: FINM L6 + HW6; STAT Ch10 + HW9",
-          "Jun 6: FINM L7-L8 + HW7; STAT consolidation",
+          "Jun 1: FINM L2 + HW2; STAT Ch6 + HW5; PDE source map",
+          "Jun 2: FINM L3 + HW3; STAT Ch7 + HW6; PDE HW5 redo",
+          "Jun 3: FINM L4 + HW4; STAT Ch8 + HW7; PDE HW5 repair",
+          "Jun 4: FINM L5 + HW5; STAT Ch9 + HW8; PDE HW6 redo",
+          "Jun 5: FINM L6 + HW6; STAT Ch10 + HW9; PDE HW6 repair",
+          "Jun 6: FINM L7-L8 + HW7; STAT consolidation; PDE HW7 redo",
+          "Jun 7: FINM map; STAT diagnostics map; PDE HW7 repair",
+          "Jun 8: FINM variants; STAT coding repairs; PDE worked examples",
+          "Jun 9: cross-course synthesis; PDE decision tree",
+          "Jun 10: three-course relearn checkpoint",
         ],
       },
       {
         title: "New paper",
-        range: "Jun 7-16",
-        start: "2026-06-07",
-        end: "2026-06-16",
+        range: "Jun 11-20",
+        start: "2026-06-11",
+        end: "2026-06-20",
         color: colors.red,
         type: "heavy",
         weight: "heavy",
         detail:
-          "Blank topic and blank manuscript. Jun 7 topic search, Jun 8-14 research, Jun 15 draft, Jun 16 finalize.",
+          "Blank topic and blank manuscript. Jun 11 topic search, Jun 12-18 research, Jun 19 draft, Jun 20 finalize.",
         items: [
-          "Jun 7: pick research problem and kill criteria",
-          "Jun 8-14: one-week research block",
-          "Jun 15: full ACM-style draft",
-          "Jun 16: final edit and scope lock",
+          "Jun 11: pick research problem and kill criteria",
+          "Jun 12-18: one-week research block",
+          "Jun 19: full ACM-style draft",
+          "Jun 20: final edit and scope lock",
         ],
-      },
-    ],
-  },
-  {
-    id: "pde",
-    label: "STAT31450 PDE",
-    sub: "fast intense sprint",
-    bars: [
-      {
-        title: "PDE sprint",
-        range: "Jun 17-26",
-        start: "2026-06-17",
-        end: "2026-06-26",
-        color: colors.gold,
-        type: "heavy",
-        weight: "heavy",
-        detail:
-          "Intense applied PDE practice right after paper. Redo HW5-HW7, repair beyond homogeneous heat equation, build method decision tree.",
-        items: ["HW5 redo", "HW6 redo", "HW7 redo", "PDE method decision tree"],
       },
     ],
   },
@@ -101,8 +86,8 @@ const lanes = [
     bars: [
       {
         title: "Probability / stoch / options",
-        range: "Jun 17-Aug 12",
-        start: "2026-06-17",
+        range: "Jun 21-Aug 12",
+        start: "2026-06-21",
         end: "2026-08-12",
         color: colors.teal,
         type: "study",
@@ -120,8 +105,8 @@ const lanes = [
     bars: [
       {
         title: "NLA / matrix computation",
-        range: "Jun 27-Aug 12",
-        start: "2026-06-27",
+        range: "Jun 21-Aug 12",
+        start: "2026-06-21",
         end: "2026-08-12",
         color: colors.green,
         type: "study",
@@ -139,8 +124,8 @@ const lanes = [
     bars: [
       {
         title: "Econometrics / time series",
-        range: "Jun 27-Aug 12",
-        start: "2026-06-27",
+        range: "Jun 21-Aug 12",
+        start: "2026-06-21",
         end: "2026-08-12",
         color: colors.violet,
         type: "study",
@@ -174,8 +159,7 @@ const lanes = [
 
 const keyItems = [
   ["Paper / heavy", colors.red, "2 lanes"],
-  ["Relearn / methods", colors.blue, "2 lanes"],
-  ["PDE sprint", colors.gold, "2 lanes"],
+  ["Spring-26 relearn", colors.blue, "3 lanes"],
   ["Probability / options", colors.teal, "long"],
   ["Linear algebra", colors.green, "long"],
   ["Econometrics / TSA", colors.violet, "long"],
@@ -290,8 +274,7 @@ function renderAxis() {
 
   [
     ["2026-06-01", "Jun 1"],
-    ["2026-06-16", "Paper target"],
-    ["2026-06-27", "3 lanes"],
+    ["2026-06-20", "Jun 20"],
     ["2026-07-29", "ICAIF"],
   ].forEach(([date, label]) => {
     const tick = document.createElement("div");
@@ -385,41 +368,34 @@ function barWidth(startDate, endDate) {
 function agendaForDate(date) {
   const key = formatDate(date);
   const exact = {
-    "2026-06-01": ["FINM32000 L2 + HW2", "STAT31511 Chapter 6 + HW5", "LeetCode short practice"],
-    "2026-06-02": ["FINM32000 L3 + HW3", "STAT31511 Chapter 7 + HW6", "LeetCode short practice"],
-    "2026-06-03": ["FINM32000 L4 + HW4", "STAT31511 Chapter 8 + HW7", "LeetCode short practice"],
-    "2026-06-04": ["FINM32000 L5 + HW5", "STAT31511 Chapter 9 + HW8", "LeetCode short practice"],
-    "2026-06-05": ["FINM32000 L6 + HW6", "STAT31511 Chapter 10 + HW9", "LeetCode short practice"],
-    "2026-06-06": ["FINM32000 L7-L8 + HW7", "STAT31511 method-map consolidation", "LeetCode short practice"],
-    "2026-06-07": ["Paper topic search", "FINM/STAT method-map cleanup", "LeetCode short practice"],
-    "2026-06-15": ["Draft paper", "Reference and format pass", "LeetCode short practice"],
-    "2026-06-16": ["Finalize paper", "Submission-readiness checklist", "LeetCode short practice"],
+    "2026-06-01": ["FINM32000 L2 + HW2", "STAT31511 Chapter 6 + HW5", "STAT31450 PDE source map", "LeetCode short practice"],
+    "2026-06-02": ["FINM32000 L3 + HW3", "STAT31511 Chapter 7 + HW6", "STAT31450 HW5 redo", "LeetCode short practice"],
+    "2026-06-03": ["FINM32000 L4 + HW4", "STAT31511 Chapter 8 + HW7", "STAT31450 HW5 repair", "LeetCode short practice"],
+    "2026-06-04": ["FINM32000 L5 + HW5", "STAT31511 Chapter 9 + HW8", "STAT31450 HW6 redo", "LeetCode short practice"],
+    "2026-06-05": ["FINM32000 L6 + HW6", "STAT31511 Chapter 10 + HW9", "STAT31450 HW6 repair", "LeetCode short practice"],
+    "2026-06-06": ["FINM32000 L7-L8 + HW7", "STAT31511 method-map consolidation", "STAT31450 HW7 redo", "LeetCode short practice"],
+    "2026-06-07": ["FINM method map", "STAT diagnostics map", "STAT31450 HW7 repair", "LeetCode short practice"],
+    "2026-06-08": ["FINM changed-input variants", "STAT coding repairs", "PDE worked examples", "LeetCode short practice"],
+    "2026-06-09": ["Cross-course option-pricing synthesis", "Monte Carlo evidence standards", "PDE decision tree", "LeetCode short practice"],
+    "2026-06-10": ["Three-course relearn checkpoint", "Paper seed list", "LeetCode short practice"],
+    "2026-06-11": ["Paper topic search", "Three-course method-map cleanup", "LeetCode short practice"],
+    "2026-06-19": ["Draft paper", "Reference and format pass", "LeetCode short practice"],
+    "2026-06-20": ["Finalize paper", "Submission-readiness checklist", "LeetCode short practice"],
   };
 
   if (exact[key]) {
     return { summary: summaryForDate(date), items: exact[key] };
   }
 
-  if (within(key, "2026-06-08", "2026-06-14")) {
-    const day = daysBetween(new Date("2026-06-08T00:00:00"), date) + 1;
+  if (within(key, "2026-06-12", "2026-06-18")) {
+    const day = daysBetween(new Date("2026-06-12T00:00:00"), date) + 1;
     return {
       summary: `Paper research day ${day}.`,
       items: [`Paper research day ${day}`, "One light support lane", "LeetCode short practice"],
     };
   }
 
-  if (within(key, "2026-06-17", "2026-06-26")) {
-    return {
-      summary: "PDE sprint with one light probability/stoch/options lane.",
-      items: [
-        "STAT31450 PDE sprint: HW5-HW7 and method tree",
-        "Probability + stochastic calculus + FINM33000 light lane",
-        "LeetCode short practice",
-      ],
-    };
-  }
-
-  if (within(key, "2026-06-27", "2026-07-28")) {
+  if (within(key, "2026-06-21", "2026-07-28")) {
     return {
       summary: "Three balanced study lanes.",
       items: [
@@ -462,10 +438,10 @@ function agendaForDate(date) {
 
 function summaryForDate(date) {
   const key = formatDate(date);
-  if (within(key, "2026-06-01", "2026-06-06")) return "Paper-critical parallel relearn.";
-  if (key === "2026-06-07") return "Protected paper topic-search lane.";
-  if (key === "2026-06-15") return "Paper draft day.";
-  if (key === "2026-06-16") return "Paper target day.";
+  if (within(key, "2026-06-01", "2026-06-10")) return "Spring-26 parallel relearn.";
+  if (key === "2026-06-11") return "Protected paper topic-search lane.";
+  if (key === "2026-06-19") return "Paper draft day.";
+  if (key === "2026-06-20") return "Paper target day.";
   return "Selected daily plan.";
 }
 
