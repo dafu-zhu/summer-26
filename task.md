@@ -148,15 +148,16 @@ Revised constraint:
 
 - A solid new paper requires finishing relearn of FINM32000, STAT31511, and STAT31450 first.
 - A protected topic-selection lane is mandatory after relearn and before research.
-- A real one-week research block is mandatory after topic selection.
+- The new paper must be complete before 2026-06-21.
 - FINM32000 and STAT31511 relearning can run in parallel because one homework from each course can be completed per day.
 - STAT31450 PDE relearn moves into the same phase, using smaller daily nodes and the extra days before the new paper target.
-- Therefore 2026-06-11 is still too early, and the current paper target is 2026-06-21.
+- STAT31450 homework practice must follow the corresponding lecture-note sections instead of being clustered.
+- Therefore the paper target is 2026-06-20, with topic selection and research overlapping the final light STAT31450 support lane.
 
 Earliest solid paper target:
 
-- Target complete draft: 2026-06-21.
-- Stretch target if research and drafting overlap unusually well: 2026-06-20.
+- Target complete draft: 2026-06-20.
+- Stretch target if research and drafting overlap unusually well: 2026-06-19.
 - Paper can continue after that if research quality requires it, but the timeline site should show the earliest defensible path.
 
 The paper is blocked by:
@@ -296,9 +297,10 @@ Assumption:
 - Each homework is a real completion node, not a vague review block.
 - Complete one FINM32000 homework and one STAT31511 homework per day while both queues are active.
 - Complete one STAT31450 PDE node per day while the PDE queue is active.
+- STAT31450 homework nodes follow their eligible lecture-note sections: learn first, practice then.
 - FINM32000, STAT31511, and STAT31450 must be relearned before choosing the paper topic.
 - One protected main lane is reserved for finding a research problem.
-- One week is reserved for research after topic selection, with paper as the heavy lane.
+- A compressed research block is reserved after topic selection, with paper as the heavy lane.
 - Paper period still keeps one light support/maintenance lane each day.
 
 Done means:
@@ -321,55 +323,71 @@ Assumed mapping from local resources:
 
 | Date | FINM32000 Output | STAT31511 Output | STAT31450 PDE Output |
 | --- | --- | --- | --- |
-| 2026-06-02 | L2 + HW2; HW2 notebook runs; variance/numerical method notes | Chapter 6 + HW5; finish chapter 6 gap; repair final weak question | Source map; homogeneous heat equation anchor; HW5 setup |
-| 2026-06-03 | L3 + HW3; HW3 notebook runs; changed-input variant | Chapter 7 + HW6; annealing/tempering implementation | HW5 redo; separation/eigenfunction method notes |
-| 2026-06-04 | L4 + HW4; HW4 notebook runs; convergence/diagnostic notes | Chapter 8 + HW7; HMC implementation and tuning log | HW5 repair; boundary/initial condition checklist |
-| 2026-06-05 | L5 + HW5; notebook runs; coding-heavy pieces repaired | Chapter 9 + HW8; particle filter implementation and ESS/resampling diagnostics | HW6 redo; transform/series method notes |
-| 2026-06-06 | L6 + HW6; both HW6 notebooks run end to end | Chapter 10 + HW9; EM or VI implementation and objective notes | HW6 repair; non-heat-equation weak areas |
-| 2026-06-07 | L7-L8 + HW7; both HW7 notebooks run; L8 reviewed | STAT31511 consolidation; chapters 6-10 method map; repair any failed node | HW7 redo; PDE modeling assumptions |
-| 2026-06-08 | FINM method map; pricing method, estimator, convergence claim | STAT diagnostic map; target, estimator, diagnostics, failure modes | HW7 repair; method choice by equation/boundary type |
-| 2026-06-09 | FINM changed-input variants; repair failed notebooks | STAT coding repairs; rerun weakest implementation | PDE beyond homogeneous heat equation; worked examples |
-| 2026-06-10 | Cross-course option-pricing method synthesis | Monte Carlo evidence standards for paper experiments | PDE decision tree; option-pricing PDE support notes |
-| 2026-06-11 | Final FINM recall sheet and runnable proof points | Final STAT recall sheet and runnable proof points | Final PDE recall sheet; HW5-HW7 evidence linked |
+| 2026-06-02 | L2 + HW2; HW2 notebook runs; variance/numerical method notes | Chapter 6 + HW5; finish chapter 6 gap; repair final weak question | Laplace's Equation; Rectangle Problems for Laplace's Equation; Laplace's Equation Inside a Circular Disk |
+| 2026-06-03 | L3 + HW3; HW3 notebook runs; changed-input variant | Chapter 7 + HW6; annealing/tempering implementation | Homework 4 Laplace practice; Solvability Condition; Neumann Solvability and Flux Balance |
+| 2026-06-04 | L4 + HW4; HW4 notebook runs; convergence/diagnostic notes | Chapter 8 + HW7; HMC implementation and tuning log | Wave Equation; Wave Equation Derivation; Backward heat equation and ill-posedness |
+| 2026-06-05 | L5 + HW5; notebook runs; coding-heavy pieces repaired | Chapter 9 + HW8; particle filter implementation and ESS/resampling diagnostics | Homework 4 wave/backward-heat practice; Sturm--Liouville Eigenvalue Problems; Sturm--Liouville Conversions |
+| 2026-06-06 | L6 + HW6; both HW6 notebooks run end to end | Chapter 10 + HW9; EM or VI implementation and objective notes | Homework 5 Sturm--Liouville practice; Sturm--Liouville Proof Details; Self-Adjoint Operators & Sturm--Liouville Problems |
+| 2026-06-07 | L7-L8 + HW7; both HW7 notebooks run; L8 reviewed | STAT31511 consolidation; chapters 6-10 method map; repair any failed node | Adjoints and the Fredholm alternative; Homework 5 adjoint/Fredholm practice; Green's Function; Green identities and symmetry |
+| 2026-06-08 | FINM method map; pricing method, estimator, convergence claim | STAT method review; target, estimator, diagnostics, failure modes | Green's Function Boundary Reduction; Homework 6 Green-identity practice; Green's Functions and Source Terms; Nonhomogeneous Heat Equations and Duhamel's Principle |
+| 2026-06-09 | FINM changed-input variants; repair failed notebooks | STAT coding repairs; rerun weakest implementation | Wave Green function by eigenfunction expansion; Direct construction and resonance; Homework 6 source/resonance practice; Fourier Transforms |
+| 2026-06-10 | Cross-course option-pricing method synthesis | Monte Carlo evidence standards for paper experiments | Fourier Transform Applications; Heat equation on the real line; Fourier transform properties used in the examples |
+| 2026-06-11 | Final FINM recall sheet and runnable proof points | Final STAT recall sheet and runnable proof points | Wave equation on the real line; Heat equation on a half-line; Homework 7 transform practice A |
+| 2026-06-12 | FINM light recall maintenance | STAT light recall maintenance | Laplace's equation on a semi-infinite strip; Laplace's equation on an infinite strip; Homework 7 strip practice |
+| 2026-06-13 | FINM/STAT paper-seed scan | STAT/FINM paper-seed scan | Laplace's equation on a half-plane; Convection--diffusion and bounded multidimensional domains; Homework 7 half-plane/convection practice |
+| 2026-06-14 | Research day 1 support | Literature note cleanup support | Introduction & Review; Heat Equation |
+| 2026-06-15 | Research day 2 support | FINM numerical-method recall support | Homework 1 heat-equation practice; Separation of Variables |
+| 2026-06-16 | Research day 3 support | STAT Monte Carlo diagnostic recall support | Fourier Series |
+| 2026-06-17 | Research day 4 support | PDE method recall support | Homework 2 Fourier-series practice; Term-by-Term Differentiation |
+| 2026-06-18 | Research day 5 support | Claims/limitations notes support | Back to Solving PDEs Using Separation of Variables; Homework 3 eigenfunction-expansion practice; final PDE recall sheet |
 
 Daily maintenance during relearn:
 
 - LeetCode short daily practice.
 
-Parallel relearn checkpoint on 2026-06-11:
+Footer label notes:
+
+- `recall maintenance`: short review to keep FINM/STAT usable while the main lane is paper or PDE.
+- `method map`: one-page table with problem type, method, assumptions, output, and failure modes.
+- `changed-input variant`: rerun solved homework or code with changed parameters to test real understanding.
+- `coding repairs`: fix notebooks/scripts until they run and the outputs make sense.
+- `Monte Carlo evidence standards`: experiment rules for seeds, variance, confidence intervals, diagnostics, and tables.
+- `Cross-course option-pricing synthesis`: connect FINM numerical pricing, STAT Monte Carlo, and PDE framing into paper ideas.
+- `recall sheet`: compact final formula sheet with key formulas, decision rules, and common traps.
+
+Parallel relearn checkpoint on 2026-06-18:
 
 - FINM32000 HW2-HW7 all attempted and runnable.
 - STAT31511 HW5-HW9 all attempted, repaired, and linked in private state.
-- STAT31450 HW5-HW7 all redone or repaired, with method-decision notes.
+- STAT31450 Laplace-through-Fourier-transform pass completed first, then pre-Laplace sections repaired.
+- STAT31450 HW1-HW7 evidence linked; each homework follows the corresponding lecture-note section before the next checkpoint.
 - FINM32000 variance and convergence gaps no longer confidence 0.
 - STAT31511 chapters 6-10 all have code/apply evidence.
-- STAT31450 beyond homogeneous heat equation no longer a blank area.
+- STAT31450 beyond homogeneous heat equation no longer a blank area: Laplace, wave, Sturm-Liouville, self-adjoint/Fredholm, Green functions, and Fourier transforms all represented.
 - One-page FINM map: pricing method, estimator, convergence claim, variance control, failure modes.
 - One-page STAT map: Monte Carlo method, target distribution/model, estimator, diagnostics, failure modes.
 - One-page PDE map: equation type, boundary/initial condition, method, assumptions, failure modes.
 
 ### Topic And Paper
 
-Paper is the heavy lane from 2026-06-12 through 2026-06-21. Each day keeps one light lane for maintenance or support, not a third major task.
+Paper is the heavy lane from 2026-06-13 through 2026-06-20. Each day keeps one light lane for maintenance or support, not a third major task.
 
 | Date | Heavy Lane | Light Lane | Required Output |
 | --- | --- | --- | --- |
-| 2026-06-12 | Research problem search | Three-course method-map cleanup | Pick one interesting Options + Monte Carlo + PDE-adjacent problem; write research question, novelty angle, minimal experiment, and kill criteria |
-| 2026-06-13 | Research day 1 | Literature note cleanup | Literature skim and baseline method; decide exact model/data/simulation setup |
-| 2026-06-14 | Research day 2 | FINM numerical-method recall | Build minimal experiment or replication scaffold |
-| 2026-06-15 | Research day 3 | STAT Monte Carlo diagnostic recall | Run first meaningful experiment; log failures |
-| 2026-06-16 | Research day 4 | PDE method recall | Improve experiment; generate first usable table/figure |
-| 2026-06-17 | Research day 5 | Citation and figure hygiene | Robustness or comparison result |
-| 2026-06-18 | Research day 6 | Claims/limitations notes | Finish evidence package; freeze scope |
-| 2026-06-19 | Research day 7 | Figure/table cleanup | Write result narrative and final figures/tables |
-| 2026-06-20 | Draft paper | Reference and format pass | Full 8-page-or-less ACM-style draft with placeholders resolved |
-| 2026-06-21 | Finalize paper | Submission-readiness checklist | Tighten claims, references, formatting, figures, and self-contained story |
+| 2026-06-13 | Research problem search | Three-course method-map cleanup | Pick one interesting Options + Monte Carlo + PDE-adjacent problem; write research question, novelty angle, minimal experiment, and kill criteria |
+| 2026-06-14 | Research day 1 | Literature note cleanup | Literature skim and baseline method; decide exact model/data/simulation setup |
+| 2026-06-15 | Research day 2 | FINM numerical-method recall | Build minimal experiment or replication scaffold |
+| 2026-06-16 | Research day 3 | STAT Monte Carlo diagnostic recall | Run first meaningful experiment; log failures |
+| 2026-06-17 | Research day 4 | PDE method recall | Improve experiment; generate first usable table/figure |
+| 2026-06-18 | Research day 5 | Claims/limitations notes | Finish evidence package; freeze scope |
+| 2026-06-19 | Draft paper | Reference and format pass | Full 8-page-or-less ACM-style draft with placeholders resolved |
+| 2026-06-20 | Finalize paper | Submission-readiness checklist | Tighten claims, references, formatting, figures, and self-contained story |
 
 Daily maintenance during paper period:
 
 - LeetCode short daily practice.
 
-Paper checkpoint on 2026-06-21:
+Paper checkpoint on 2026-06-20:
 
 - New topic, not old `spring-26` paper.
 - New manuscript, not STAT31511 essay.
@@ -387,9 +405,9 @@ Phase 1B should stretch subjects over many days. The table below defines lanes, 
 | Lane | Span | Daily Style | Output |
 | --- | --- | --- | --- |
 | LeetCode | 2026-06-02 onward | Short daily practice, no long-hour requirement | Daily continuity for coding interviews |
-| Probability + Stochastic Calculus + FINM33000 | 2026-06-22 to 2026-08-24 | Daily low-dose probability/stochastic/options work | Quant probability map, `finbook` chapters 2-6 cards, FINM33000 fundamentals repair |
-| Linear Algebra + Matrix Computation | 2026-06-22 to 2026-08-24 | Small daily topic card + exercises | 100 selected exercises, OLS projection derivation, SVD/PCA/conditioning cards |
-| Econometrics + Time Series | 2026-06-22 to 2026-08-24 | BUSN41902 plus undergrad time-series notes, one concept/model per day | OLS/econometrics concept map; stationarity/ACF/ARMA/ARIMA/forecast diagnostics |
+| Probability + Stochastic Calculus + FINM33000 | 2026-06-21 to 2026-08-24 | Daily low-dose probability/stochastic/options work | Quant probability map, `finbook` chapters 2-6 cards, FINM33000 fundamentals repair |
+| Linear Algebra + Matrix Computation | 2026-06-21 to 2026-08-24 | Small daily topic card + exercises | 100 selected exercises, OLS projection derivation, SVD/PCA/conditioning cards |
+| Econometrics + Time Series | 2026-06-21 to 2026-08-24 | BUSN41902 plus undergrad time-series notes, one concept/model per day | OLS/econometrics concept map; stationarity/ACF/ARMA/ARIMA/forecast diagnostics |
 | ICAIF Submission Decision | 2026-07-29 to 2026-08-02 | Conditional paper lane, only if draft is viable | Decide whether June paper should become an ICAIF 2026 submission; if yes, temporarily prioritize formatting/submission work before Aug 2 |
 | Interview Synthesis | 2026-08-25 onward | Three balanced maintenance lanes plus daily LeetCode | Mixed probability/options/MC/PDE practice, project polish, maintenance review |
 
@@ -397,9 +415,9 @@ Phase 1B should stretch subjects over many days. The table below defines lanes, 
 
 | Dates | Lane Count | Daily Lanes |
 | --- | ---: | --- |
-| 2026-06-02 to 2026-06-11 | 3 plus LeetCode | FINM32000; STAT31511; STAT31450 PDE; daily LeetCode |
-| 2026-06-12 to 2026-06-21 | 2 plus LeetCode | Paper-heavy lane plus one light support lane; daily LeetCode |
-| 2026-06-22 to 2026-07-28 | 3 plus LeetCode | Linear Algebra + Matrix Computation; Probability + Stochastic Calculus + FINM33000; Econometrics + Time Series; daily LeetCode |
+| 2026-06-02 to 2026-06-12 | 3 plus LeetCode | FINM32000; STAT31511; STAT31450 PDE; daily LeetCode |
+| 2026-06-13 to 2026-06-20 | 2 plus LeetCode | Paper-heavy lane plus one light STAT31450 support lane through 2026-06-18; daily LeetCode |
+| 2026-06-21 to 2026-07-28 | 3 plus LeetCode | Linear Algebra + Matrix Computation; Probability + Stochastic Calculus + FINM33000; Econometrics + Time Series; daily LeetCode |
 | 2026-07-29 to 2026-08-02 | 3 plus LeetCode, or 2 if ICAIF viable | Default: three study lanes continue. If paper is viable for ICAIF, temporarily switch to paper submission lane plus one light maintenance lane; daily LeetCode |
 | 2026-08-03 to 2026-08-24 | 3 plus LeetCode | Linear Algebra + Matrix Computation; Probability + Stochastic Calculus + FINM33000; Econometrics + Time Series; daily LeetCode |
 | 2026-08-25 onward | 3 plus LeetCode | Interview problem practice; project/paper polish; weak-area maintenance; daily LeetCode |
@@ -424,8 +442,8 @@ Initial UI should show:
 - Thicker bands for spring-course relearn and heavy paper periods.
 - Paper target date as a visible fixed milestone.
 - Blocked dependencies from FINM32000, STAT31511, and STAT31450 into Paper 1.
-- Postponed probability track after 2026-06-21.
-- Probability + stochastic calculus + FINM33000 lane starts after the paper on 2026-06-22 and continues long.
+- Postponed probability track after 2026-06-20.
+- Probability + stochastic calculus + FINM33000 lane starts after the paper on 2026-06-21 and continues long.
 - Status labels: active, blocked, postponed, done, shaky, strong.
 - Course nodes with compact metadata: lectures, chapters, homework, confidence.
 
@@ -443,7 +461,7 @@ Resolved from `spring-26`:
 - STAT31511 chapter paths for chapters 6-10.
 - STAT31450 lecture notes, homework, tutorial notes, solutions, rubrics, and textbook paths.
 - ICAIF paper format constraints.
-- June 11 target revised to current paper target of 2026-06-21.
+- June 11 target revised to current paper target of 2026-06-20.
 - FINM33000 placed after the paper unless needed as support.
 - Recovery PDF read; only Linear Algebra + Matrix Computation and Econometrics + Time Series retained.
 - Linear Algebra source path found.
@@ -453,7 +471,7 @@ Resolved from `spring-26`:
 - Scheduling model updated: no default single-task days; 2 lanes for heavy work, 3 lanes for balanced work.
 - Daily LeetCode added as always-on maintenance.
 - STAT31450 PDE moved into the same relearn phase as FINM32000 and STAT31511.
-- Probability + stochastic calculus + FINM33000 starts after the paper on 2026-06-22.
+- Probability + stochastic calculus + FINM33000 starts after the paper on 2026-06-21.
 - After paper target, three study lanes run together: linear algebra/matrix computation, probability/stochastic/options, econometrics/time series.
 
 Still unresolved:
