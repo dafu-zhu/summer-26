@@ -148,6 +148,10 @@ h2 {
   align-items: start;
 }
 
+.panel-head--timeline > * {
+  min-width: 0;
+}
+
 .lane-key {
   display: grid;
   gap: 8px;
@@ -183,7 +187,7 @@ h2 {
 
 .checkpoint {
   display: grid;
-  grid-template-columns: 54px 1fr;
+  grid-template-columns: 54px minmax(0, 1fr);
   gap: 10px;
   margin-top: 16px;
   padding: 10px;
@@ -203,6 +207,11 @@ h2 {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.checkpoint > div {
+  min-width: 0;
 }
 
 .timeline-panel {
@@ -574,11 +583,11 @@ h2 {
   .workspace,
   .detail-panel,
   .notes-panel {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .panel-head--timeline {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .lane-row {
@@ -614,17 +623,30 @@ h2 {
   }
 
   .segmented {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
   }
 
   .segment {
     flex: 1;
     min-width: 0;
+    padding: 0 4px;
+    font-size: 12px;
+  }
+
+  .panel-head--timeline {
+    padding: 14px 10px 0;
   }
 
   .timeline-scroll {
+    overflow-x: auto;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .timeline {
+    min-width: 620px;
   }
 
   .side-panel {
@@ -634,6 +656,14 @@ h2 {
   .side-panel .panel-head {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .checkpoint {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .checkpoint__date {
+    justify-self: start;
   }
 
   .lane-row {

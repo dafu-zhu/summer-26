@@ -1,5 +1,5 @@
-const start = new Date("2026-06-02T00:00:00");
-const end = new Date("2026-08-13T00:00:00");
+const start = new Date("2026-06-03T00:00:00");
+const end = new Date("2026-08-14T00:00:00");
 const totalDays = daysBetween(start, end) + 1;
 
 const colors = {
@@ -20,9 +20,9 @@ const lanes = [
     bars: [
       {
         title: "Daily coding practice",
-        range: "Jun 2 onward",
-        start: "2026-06-02",
-        end: "2026-08-13",
+        range: "Jun 3 onward",
+        start: "2026-06-03",
+        end: "2026-08-14",
         color: colors.black,
         type: "daily",
         weight: "thin",
@@ -39,43 +39,43 @@ const lanes = [
     bars: [
       {
         title: "Spring-26 core relearn",
-        range: "Jun 2-12",
-        start: "2026-06-02",
-        end: "2026-06-12",
+        range: "Jun 3-13",
+        start: "2026-06-03",
+        end: "2026-06-13",
         color: colors.blue,
         type: "heavy",
         weight: "heavy",
         detail:
           "Relearn all three spring courses before choosing the paper topic: FINM32000, STAT31511, and STAT31450 PDE.",
         items: [
-          "Jun 2: FINM L2 + HW2; STAT Ch6 + HW5; PDE Laplace's Equation",
-          "Jun 3: FINM L3 + HW3; STAT Ch7 + HW6; PDE Homework 4 Laplace practice + Solvability Condition",
-          "Jun 4: FINM L4 + HW4; STAT Ch8 + HW7; PDE Wave Equation",
-          "Jun 5: FINM L5 + HW5; STAT Ch9 + HW8; PDE Homework 4 wave practice + Sturm--Liouville",
-          "Jun 6: FINM L6 + HW6; STAT Ch10 + HW9; PDE Homework 5 practice + Self-Adjoint Operators",
-          "Jun 7: FINM L7-L8 + HW7; STAT consolidation; PDE Homework 5 practice + Green's Function",
-          "Jun 8: FINM map; STAT method review; PDE Homework 6 practice + Green's Functions and Source Terms",
-          "Jun 9: FINM variants; STAT coding repairs; PDE Homework 6 practice + Fourier Transforms",
-          "Jun 10: cross-course synthesis; PDE Fourier transform applications",
-          "Jun 11: FINM/STAT checkpoint; PDE wave/half-line + HW7 A",
-          "Jun 12: PDE strip Laplace + HW7 strip practice",
+          "Jun 3: FINM L2 + HW2; STAT Ch6 + HW5; PDE Laplace's Equation",
+          "Jun 4: FINM L3 + HW3; STAT Ch7 + HW6; PDE Homework 4 Laplace practice + Solvability Condition",
+          "Jun 5: FINM L4 + HW4; STAT Ch8 + HW7; PDE Wave Equation",
+          "Jun 6: FINM L5 + HW5; STAT Ch9 + HW8; PDE Homework 4 wave practice + Sturm--Liouville",
+          "Jun 7: FINM L6 + HW6; STAT Ch10 + HW9; PDE Homework 5 practice + Self-Adjoint Operators",
+          "Jun 8: FINM L7-L8 + HW7; STAT consolidation; PDE Homework 5 practice + Green's Function",
+          "Jun 9: FINM map; STAT method review; PDE Homework 6 practice + Green's Functions and Source Terms",
+          "Jun 10: FINM variants; STAT coding repairs; PDE Homework 6 practice + Fourier Transforms",
+          "Jun 11: cross-course synthesis; PDE Fourier transform applications",
+          "Jun 12: FINM/STAT checkpoint; PDE wave/half-line + HW7 A",
+          "Jun 13: PDE strip Laplace + HW7 strip practice",
         ],
       },
       {
         title: "New paper",
-        range: "Jun 13-20",
-        start: "2026-06-13",
-        end: "2026-06-20",
+        range: "Jun 14-21",
+        start: "2026-06-14",
+        end: "2026-06-21",
         color: colors.red,
         type: "heavy",
         weight: "heavy",
         detail:
-          "Blank topic and blank manuscript. Jun 13 topic search, Jun 14-18 research, Jun 19 draft, Jun 20 finalize.",
+          "Blank topic and blank manuscript. Jun 14 topic search, Jun 15-19 research, Jun 20 draft, Jun 21 finalize.",
         items: [
-          "Jun 13: pick research problem and kill criteria",
-          "Jun 14-18: compressed research block",
-          "Jun 19: full ACM-style draft",
-          "Jun 20: final edit and scope lock",
+          "Jun 14: pick research problem and kill criteria",
+          "Jun 15-19: compressed research block",
+          "Jun 20: full ACM-style draft",
+          "Jun 21: final edit and scope lock",
         ],
       },
     ],
@@ -87,9 +87,9 @@ const lanes = [
     bars: [
       {
         title: "Probability / stoch / options",
-        range: "Jun 21-Aug 13",
-        start: "2026-06-21",
-        end: "2026-08-13",
+        range: "Jun 22-Aug 14",
+        start: "2026-06-22",
+        end: "2026-08-14",
         color: colors.teal,
         type: "study",
         weight: "thin",
@@ -106,9 +106,9 @@ const lanes = [
     bars: [
       {
         title: "NLA / matrix computation",
-        range: "Jun 21-Aug 13",
-        start: "2026-06-21",
-        end: "2026-08-13",
+        range: "Jun 22-Aug 14",
+        start: "2026-06-22",
+        end: "2026-08-14",
         color: colors.green,
         type: "study",
         weight: "thin",
@@ -125,9 +125,9 @@ const lanes = [
     bars: [
       {
         title: "Econometrics / time series",
-        range: "Jun 21-Aug 13",
-        start: "2026-06-21",
-        end: "2026-08-13",
+        range: "Jun 22-Aug 14",
+        start: "2026-06-22",
+        end: "2026-08-14",
         color: colors.violet,
         type: "study",
         weight: "thin",
@@ -274,8 +274,8 @@ function renderAxis() {
   axis.className = "timeline-axis";
 
   [
-    ["2026-06-02", "Jun 2"],
-    ["2026-06-20", "Jun 20"],
+    ["2026-06-03", "Jun 3"],
+    ["2026-06-21", "Jun 21"],
     ["2026-07-29", "ICAIF"],
   ].forEach(([date, label]) => {
     const tick = document.createElement("div");
@@ -369,32 +369,32 @@ function barWidth(startDate, endDate) {
 function agendaForDate(date) {
   const key = formatDate(date);
   const exact = {
-    "2026-06-02": ["FINM32000 L2 + HW2", "STAT31511 Chapter 6 + HW5", "STAT31450: Laplace's Equation", "STAT31450: Rectangle Problems for Laplace's Equation", "STAT31450: Laplace's Equation Inside a Circular Disk", "LeetCode short practice"],
-    "2026-06-03": ["FINM32000 L3 + HW3", "STAT31511 Chapter 7 + HW6", "STAT31450: Homework 4 Laplace practice", "STAT31450: Solvability Condition", "STAT31450: Neumann Solvability and Flux Balance", "LeetCode short practice"],
-    "2026-06-04": ["FINM32000 L4 + HW4", "STAT31511 Chapter 8 + HW7", "STAT31450: Wave Equation", "STAT31450: Wave Equation Derivation", "STAT31450: Backward heat equation and ill-posedness", "LeetCode short practice"],
-    "2026-06-05": ["FINM32000 L5 + HW5", "STAT31511 Chapter 9 + HW8", "STAT31450: Homework 4 wave/backward-heat practice", "STAT31450: Sturm--Liouville Eigenvalue Problems", "STAT31450: Sturm--Liouville Conversions", "LeetCode short practice"],
-    "2026-06-06": ["FINM32000 L6 + HW6", "STAT31511 Chapter 10 + HW9", "STAT31450: Homework 5 Sturm--Liouville practice", "STAT31450: Sturm--Liouville Proof Details", "STAT31450: Self-Adjoint Operators & Sturm--Liouville Problems", "LeetCode short practice"],
-    "2026-06-07": ["FINM32000 L7-L8 + HW7", "STAT31511 method-map consolidation", "STAT31450: Adjoints and the Fredholm alternative", "STAT31450: Homework 5 adjoint/Fredholm practice", "STAT31450: Green's Function", "STAT31450: Green identities and symmetry", "LeetCode short practice"],
-    "2026-06-08": ["FINM method map", "STAT method review", "STAT31450: Green's Function Boundary Reduction", "STAT31450: Homework 6 Green-identity practice", "STAT31450: Green's Functions and Source Terms", "STAT31450: Nonhomogeneous Heat Equations and Duhamel's Principle", "LeetCode short practice"],
-    "2026-06-09": ["FINM changed-input variants", "STAT coding repairs", "STAT31450: Wave Green function by eigenfunction expansion", "STAT31450: Direct construction and resonance", "STAT31450: Homework 6 source/resonance practice", "STAT31450: Fourier Transforms", "LeetCode short practice"],
-    "2026-06-10": ["Cross-course option-pricing synthesis", "Monte Carlo evidence standards", "STAT31450: Fourier Transform Applications", "STAT31450: Heat equation on the real line", "STAT31450: Fourier transform properties used in the examples", "LeetCode short practice"],
-    "2026-06-11": ["Final FINM recall sheet", "Final STAT recall sheet", "STAT31450: Wave equation on the real line", "STAT31450: Heat equation on a half-line", "STAT31450: Homework 7 transform practice A", "LeetCode short practice"],
-    "2026-06-12": ["FINM light recall maintenance", "STAT light recall maintenance", "STAT31450: Laplace's equation on a semi-infinite strip", "STAT31450: Laplace's equation on an infinite strip", "STAT31450: Homework 7 strip practice", "LeetCode short practice"],
-    "2026-06-13": ["Paper topic search", "Three-course method-map cleanup", "STAT31450: Laplace's equation on a half-plane", "STAT31450: Convection--diffusion and bounded multidimensional domains", "STAT31450: Homework 7 half-plane/convection practice", "LeetCode short practice"],
-    "2026-06-14": ["Paper research day 1", "Literature note cleanup", "STAT31450: Introduction & Review", "STAT31450: Heat Equation", "LeetCode short practice"],
-    "2026-06-15": ["Paper research day 2", "FINM numerical-method recall", "STAT31450: Homework 1 heat-equation practice", "STAT31450: Separation of Variables", "LeetCode short practice"],
-    "2026-06-16": ["Paper research day 3", "STAT Monte Carlo diagnostic recall", "STAT31450: Fourier Series", "LeetCode short practice"],
-    "2026-06-17": ["Paper research day 4", "PDE method recall", "STAT31450: Homework 2 Fourier-series practice", "STAT31450: Term-by-Term Differentiation", "LeetCode short practice"],
-    "2026-06-18": ["Paper research day 5", "Claims/limitations notes", "STAT31450: Back to Solving PDEs Using Separation of Variables", "STAT31450: Homework 3 eigenfunction-expansion practice", "STAT31450: Final PDE recall sheet", "LeetCode short practice"],
-    "2026-06-19": ["Draft paper", "Reference and format pass", "LeetCode short practice"],
-    "2026-06-20": ["Finalize paper", "Submission-readiness checklist", "LeetCode short practice"],
+    "2026-06-03": ["FINM32000 L2 + HW2", "STAT31511 Chapter 6 + HW5", "STAT31450: Laplace's Equation", "STAT31450: Rectangle Problems for Laplace's Equation", "STAT31450: Laplace's Equation Inside a Circular Disk", "LeetCode short practice"],
+    "2026-06-04": ["FINM32000 L3 + HW3", "STAT31511 Chapter 7 + HW6", "STAT31450: Homework 4 Laplace practice", "STAT31450: Solvability Condition", "STAT31450: Neumann Solvability and Flux Balance", "LeetCode short practice"],
+    "2026-06-05": ["FINM32000 L4 + HW4", "STAT31511 Chapter 8 + HW7", "STAT31450: Wave Equation", "STAT31450: Wave Equation Derivation", "STAT31450: Backward heat equation and ill-posedness", "LeetCode short practice"],
+    "2026-06-06": ["FINM32000 L5 + HW5", "STAT31511 Chapter 9 + HW8", "STAT31450: Homework 4 wave/backward-heat practice", "STAT31450: Sturm--Liouville Eigenvalue Problems", "STAT31450: Sturm--Liouville Conversions", "LeetCode short practice"],
+    "2026-06-07": ["FINM32000 L6 + HW6", "STAT31511 Chapter 10 + HW9", "STAT31450: Homework 5 Sturm--Liouville practice", "STAT31450: Sturm--Liouville Proof Details", "STAT31450: Self-Adjoint Operators & Sturm--Liouville Problems", "LeetCode short practice"],
+    "2026-06-08": ["FINM32000 L7-L8 + HW7", "STAT31511 method-map consolidation", "STAT31450: Adjoints and the Fredholm alternative", "STAT31450: Homework 5 adjoint/Fredholm practice", "STAT31450: Green's Function", "STAT31450: Green identities and symmetry", "LeetCode short practice"],
+    "2026-06-09": ["FINM method map", "STAT method review", "STAT31450: Green's Function Boundary Reduction", "STAT31450: Homework 6 Green-identity practice", "STAT31450: Green's Functions and Source Terms", "STAT31450: Nonhomogeneous Heat Equations and Duhamel's Principle", "LeetCode short practice"],
+    "2026-06-10": ["FINM changed-input variants", "STAT coding repairs", "STAT31450: Wave Green function by eigenfunction expansion", "STAT31450: Direct construction and resonance", "STAT31450: Homework 6 source/resonance practice", "STAT31450: Fourier Transforms", "LeetCode short practice"],
+    "2026-06-11": ["Cross-course option-pricing synthesis", "Monte Carlo evidence standards", "STAT31450: Fourier Transform Applications", "STAT31450: Heat equation on the real line", "STAT31450: Fourier transform properties used in the examples", "LeetCode short practice"],
+    "2026-06-12": ["Final FINM recall sheet", "Final STAT recall sheet", "STAT31450: Wave equation on the real line", "STAT31450: Heat equation on a half-line", "STAT31450: Homework 7 transform practice A", "LeetCode short practice"],
+    "2026-06-13": ["FINM light recall maintenance", "STAT light recall maintenance", "STAT31450: Laplace's equation on a semi-infinite strip", "STAT31450: Laplace's equation on an infinite strip", "STAT31450: Homework 7 strip practice", "LeetCode short practice"],
+    "2026-06-14": ["Paper topic search", "Three-course method-map cleanup", "STAT31450: Laplace's equation on a half-plane", "STAT31450: Convection--diffusion and bounded multidimensional domains", "STAT31450: Homework 7 half-plane/convection practice", "LeetCode short practice"],
+    "2026-06-15": ["Paper research day 1", "Literature note cleanup", "STAT31450: Introduction & Review", "STAT31450: Heat Equation", "LeetCode short practice"],
+    "2026-06-16": ["Paper research day 2", "FINM numerical-method recall", "STAT31450: Homework 1 heat-equation practice", "STAT31450: Separation of Variables", "LeetCode short practice"],
+    "2026-06-17": ["Paper research day 3", "STAT Monte Carlo diagnostic recall", "STAT31450: Fourier Series", "LeetCode short practice"],
+    "2026-06-18": ["Paper research day 4", "PDE method recall", "STAT31450: Homework 2 Fourier-series practice", "STAT31450: Term-by-Term Differentiation", "LeetCode short practice"],
+    "2026-06-19": ["Paper research day 5", "Claims/limitations notes", "STAT31450: Back to Solving PDEs Using Separation of Variables", "STAT31450: Homework 3 eigenfunction-expansion practice", "STAT31450: Final PDE recall sheet", "LeetCode short practice"],
+    "2026-06-20": ["Draft paper", "Reference and format pass", "LeetCode short practice"],
+    "2026-06-21": ["Finalize paper", "Submission-readiness checklist", "LeetCode short practice"],
   };
 
   if (exact[key]) {
     return { summary: summaryForDate(date), items: exact[key] };
   }
 
-  if (within(key, "2026-06-21", "2026-07-28")) {
+  if (within(key, "2026-06-22", "2026-07-28")) {
     return {
       summary: "Three balanced study lanes.",
       items: [
@@ -417,7 +417,7 @@ function agendaForDate(date) {
     };
   }
 
-  if (within(key, "2026-08-03", "2026-08-13")) {
+  if (within(key, "2026-08-03", "2026-08-14")) {
     return {
       summary: "Three balanced study lanes continue.",
       items: [
@@ -437,11 +437,11 @@ function agendaForDate(date) {
 
 function summaryForDate(date) {
   const key = formatDate(date);
-  if (key === "2026-06-13") return "Protected paper topic-search lane.";
-  if (within(key, "2026-06-14", "2026-06-18")) return "Paper research with STAT31450 support.";
-  if (key === "2026-06-19") return "Paper draft day.";
-  if (key === "2026-06-20") return "Paper target day.";
-  if (within(key, "2026-06-02", "2026-06-12")) return "Spring-26 parallel relearn.";
+  if (key === "2026-06-14") return "Protected paper topic-search lane.";
+  if (within(key, "2026-06-15", "2026-06-19")) return "Paper research with STAT31450 support.";
+  if (key === "2026-06-20") return "Paper draft day.";
+  if (key === "2026-06-21") return "Paper target day.";
+  if (within(key, "2026-06-03", "2026-06-13")) return "Spring-26 parallel relearn.";
   return "Selected daily plan.";
 }
 
